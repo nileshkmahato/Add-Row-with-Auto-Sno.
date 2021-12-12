@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Assessment</title>
+
+  <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+  <style>
+    h2 {
+      text-align: center;
+    }
+
+    .content {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    table {
+      border: 2px solid chartreuse;
+      border-radius: 10px;
+      margin-top: 20px;
+      margin-bottom: 50px;
+
+    }
+
+    /* css for sno. */
+    .css-serial {
+      counter-reset: serial-number;
+      /* Set the serial number counter to 0 */
+    }
+
+    .css-serial td:first-child:before {
+      counter-increment: serial-number;
+      /* Increment the serial number counter */
+      content: counter(serial-number);
+      /* Display the counter */
+    }
+
+    /* end css for sno. */
+
+    table,
+    tr,
+    th,
+    td {
+      padding: 10px;
+    }
+
+    table td:hover {
+      background-color: #f8f8f8;
+    }
+
+    .del {
+      cursor: pointer;
+    }
+
+    button {
+      background-color: #4a6fa5;
+      border: 2px solid rgba(0, 0, 255, 0.336);
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="content">
+    <h2>Assignment 1</h2>
+    <caption>Student Slot:</caption>
+    <table id="Table" class="css-serial" width="100%" border="2">
+
+      <tr>
+        <th> S.No.</th>
+        <th> First Name</th>
+        <th> Last Name</th>
+        <th> City</th>
+        <th> Country</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td> Jones</td>
+        <td> Reynalds</td>
+        <td> Yonkers</td>
+        <td> United States</td>
+        <td><a type="button" value="Delete" onclick="deleteRow(this)" class="del"><i class="far fa-trash-alt"></i></a>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Kivell</td>
+        <td>Starmore</td>
+        <td>Garland</td>
+        <td>United States</td>
+        <td><a type="button" value="Delete" onclick="deleteRow(this)" class="del"><i class="far fa-trash-alt"></i></a>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Jardine</td>
+        <td>Toun</td>
+        <td>Launceston</td>
+        <td>Australia</td>
+        <td><a type="button" value="Delete" onclick="deleteRow(this)" class="del"><i class="far fa-trash-alt"></i></a>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Gill</td>
+        <td>Thornebarrow</td>
+        <td>Sydney</td>
+        <td>Australia</td>
+        <td><a type="button" value="Delete" onclick="deleteRow(this)" class="del"><i class="far fa-trash-alt"></i></a>
+        </td>
+      </tr>
+
+    </table>
+
+    <button type="button" onclick="addBottom('Table')">Add row to bottom</button>
+    <button type="button" onclick="addTop()">Add row to top</button>
+  </div>
+
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>
